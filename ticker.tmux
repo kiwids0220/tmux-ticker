@@ -4,6 +4,9 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
 ticker_commands=(
+  "#($CURRENT_DIR/scripts/eth.sh)"
+  "#($CURRENT_DIR/scripts/doge.sh)"
+  "#($CURRENT_DIR/scripts/link.sh)"
   "#($CURRENT_DIR/scripts/dji.sh)"
   "#($CURRENT_DIR/scripts/dji_change.sh)"
   "#($CURRENT_DIR/scripts/nasdaq.sh)"
@@ -19,6 +22,9 @@ ticker_commands=(
 )
 
 ticker_interpolation=(
+        "\#{ticker_eth}"
+        "\#{ticker_doge}"
+        "\#{ticker_link}"
 	"\#{ticker_dji}"
 	"\#{ticker_dji_change}"
 	"\#{ticker_nasdaq}"
